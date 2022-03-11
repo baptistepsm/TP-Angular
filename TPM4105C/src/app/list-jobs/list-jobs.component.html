@@ -1,0 +1,6 @@
+<h3>Liste des offres d'emploi</h3>
+<ul *ngFor="let job of list |async">
+    <li>{{ job.Title }} - {{ job.DateOfPublish }}</li>
+        <p>{{ job.Description }}</p>
+        <p>{{ job.Salary }}</p>
+</ul>

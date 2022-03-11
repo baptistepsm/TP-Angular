@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { Jobs } from '../models/jobs';
 
 @Injectable({
@@ -34,4 +35,9 @@ export class JobsService {
     toute sécurité (Maketplace et plateforme BTOB).", DateOfPublish: new
     Date(2022, 1, 3), Location: "Lyon", Salary: "32K-42K" },
     ]
-}
+
+    public ObservableJobs() {
+      return of(this._jobs);
+    }
+    
+    }
